@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="website icon" href="WORK2.png" type="image/png" media="all" />
+<title>dgt.skillindiadigital.gov.in</title>
+
+<!-- Optional font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+:root {
+--bg: #f6f7f9;
+--card: #ffffff;
+--muted: #7b7f86;
+--accent: #f6a623;
+--border: #e6e9ee;
+--shadow: 0 6px 18px rgba(20,30,60,0.06);
+--radius: 14px;
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html,body {
+height: 100%;
+margin: 0;
+background: linear-gradient(180deg,var(--bg),#fff 60%);
+color: #222;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+a {
+text-decoration: none;
+}
+.container {
+max-width: 900px;
+margin: 28px auto;
+padding: 22px;
+}
+
+.card {
+background: var(--card);
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+padding: 26px;
+border: 1px solid var(--border);
+}
+
+.header {
+display: flex;
+align-items: center;
+gap: 18px;
+border-bottom: 1px solid var(--border);
+padding-bottom: 18px;
+margin-bottom: 18px;
+}
+
+.logo-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.title {
+font-size: clamp(1.5rem,4vw, 3rem);
+font-weight: 700;
+margin: 18px 6px;
+color: #222;
+}
+.main2 {
+display: none;
+}
+.hamburger {
+width: 120px;
+height: 70px;
+border-radius: 8px;
+background: linear-gradient(90deg,#fff,#fafafa);
+border: 1px solid var(--border);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 1200;
+font-size: 30px;
+color: black;
+}
+.hamburger2 {
+width: 40px;
+height: 30px;
+border-radius: 8px;
+background: linear-gradient(90deg,#fff,#fafafa);
+border: 1px solid var(--border);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 1200;
+font-size: 15px;
+color: black;
+}
+.profile-row {
+display: flex;
+gap: 28px;
+align-items: flex-start;
+padding: 22px 9px;
+}
+.kartik {
+display: none;
+}
+.avatar-wrap {
+width: 132px;
+text-align: center;
+display: block;
+}
+.avatar {
+width: 116px;
+height: 116px;
+border-radius: 999px;
+border: 6px solid var(--accent);
+overflow: hidden;
+display: inline-block;
+background: #ddd;
+}
+.avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.details {
+flex: 1;
+display: flex;
+gap: 22px;
+flex-wrap: wrap;
+}
+
+.col {
+min-width: 220px;
+flex: 1;
+}
+
+.field {
+display: flex;
+gap: 12px;
+padding: 6px 0;
+}
+.label {
+min-width: 120px;
+color: var(--muted);
+font-weight: 600;
+font-size: 13px;
+}
+.value {
+font-weight: 600;
+color: #222;
+font-size: 14px;
+}
+
+/* Marks table */
+.marks-card {
+margin-top: 18px;
+border-radius: 12px;
+overflow: auto;
+border: 1px solid var(--border);
+}
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 14px;
+background: transparent;
+}
+
+thead th {
+text-align: center;
+padding: 12px 16px;
+background: linear-gradient(90deg,#fff,#fafafa);
+color: #222;
+font-weight: 600;
+border-bottom: 1px solid var(--border);
+font-weight: bold;
+}
+
+tbody td {
+padding: 12px 16px;
+border-bottom: 1px solid #f1f3f6;
+color: #333;
+}
+
+tbody tr:last-child td {
+border-bottom: 0;
+}
+
+.sno {
+width: 48px;
+}
+
+.total-row {
+background: #f3f2f1;
+font-weight: 700;
+}
+
+.result {
+display: inline-block;
+justify-content: space-between;
+margin-top: 15px;
+font-weight: bold;
+}
+
+/* small screens */
+@media (max-width:720px) {
+
+.container {
+padding: 6px;
+margin: 6px;
+}
+.hamburger {
+display: none;
+}
+.profile-row {
+display: flex;
+gap: 28px;
+align-items: flex-start;
+padding: 11px 3px;
+}
+.col {
+min-width: 220px;
+flex: 1;
+}
+.label {
+min-width: 110px;
+}
+.avatar-wrap {
+width: 100%;
+}
+.avatar {
+margin: 0 0 6px;
+}
+}
+@media (max-width:600px) {
+.main {
+display: none;
+}
+.main2 {
+display: block;
+}
+.main3 {
+display: none;
+}
+.kartik {
+display: flex;
+}
+.kartik2 {
+display: none;
+}
+}
+@media(min-width:600px) {
+.main {
+display: none;
+}
+.main2 {
+display: none;
+}
+.main3 {
+display: block;
+}
+}
+@media(min-width:840px) {
+.main {
+display: block;
+}
+.main2 {
+display: none;
+}
+.main3 {
+display: none;
+}
+.hamburger2 {
+display: none;
+}
+}
+@media(max-width:840px) {
+.hamburger {
+display: none;
+}
+.hamburger2 {
+display: flex;
+}
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="main">
+<img src="white.png" alt="" width="150" class="white" />
+<img src="MINISTER.png" alt="" width="160 "class="MINISTER" />
+<img src="SKILL.png" alt="" width="230" class="SKILL" />
+<img src="WORK.png" alt="" width="100" class="WORK" />
+<img src="ITI.png" alt="" width="130" class="ITI" />
+</div>
+<div class="main2">
+<img src="white.png" alt="" width="15" class="white" />
+<img src="MINISTER.png" alt="" width="70 "class="MINISTER" />
+<img src="SKILL.png" alt="" width="100" class="SKILL" />
+<img src="WORK.png" alt="" width="45" class="WORK" />
+<img src="ITI.png" alt="" width="55" class="ITI" />
+</div>
+<div class="main3">
+<img src="white.png" alt="" width="70" class="white" />
+<img src="MINISTER.png" alt="" width="90 "class="MINISTER" />
+<img src="SKILL.png" alt="" width="140" class="SKILL" />
+<img src="WORK.png" alt="" width="60" class="WORK" />
+<img src="ITI.png" alt="" width="80" class="ITI" />
+</div>
+<a href="https://www.skillindiadigital.gov.in/">
+<div class="hamburger">
+<b>HOME</b>
+</div>
+<div class="hamburger2">
+<i class="fa fa-home"></i>
+</div>
+</a>
+</div>
+
+<div class="container">
+<div class="card">
+
+<div class="header">
+<div class="logo-left">
+<div>
+<div class="title">
+Trainee Details
+</div>
+</div>
+</div>
+</div>
+<Center><div class="avatar-wrap">
+<div class="avatar" title="photo">
+<!-- Replace with actual base64 or image URL -->
+<img src="RAKESH.jpg" alt="Trainee Photo">
+</div>
+
+</div>
+</Center>
+
+<div class="profile-row">
+<div class="kartik2">
+<br />
+<div class="details">
+<div class="col">
+<div class="field">
+<div class="label">
+Roll No
+</div>
+<div class="value">
+00180821034775
+</div>
+</div>
+<div class="field">
+<div class="label">
+Father Name
+</div>
+<div class="value">
+    BHAGABANA BEHERA
+</div>
+</div>
+
+<div class="field">
+<div class="label">
+Trade Name
+</div>
+<div class="value">
+Electrical
+</div>
+</div>
+<div class="field">
+<div class="label">
+Date of Birth
+</div>
+<div class="value">
+04-May-1999
+</div>
+</div>
+<div class="field">
+<div class="label">
+ITI Name
+</div>
+<div class="value">
+Govt Industrial Training Institute, Berhampur
+</div>
+</div>
+<div class="field">
+<div class="label">
+Unit
+</div>
+<div class="value">
+7
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="field">
+<div class="label">
+Name
+</div>
+<div class="value">
+    RAKESH KUMAR BEHERA
+</div>
+</div>
+<div class="field">
+<div class="label">
+Trade Code
+</div>
+<div class="value">
+442
+</div>
+</div>
+<div class="field">
+<div class="label">
+Admission Year
+</div>
+<div class="value">
+2018
+</div>
+</div>
+<div class="field">
+<div class="label">
+ITI Code
+</div>
+<div class="value">
+GU21000525
+</div>
+</div>
+<div class="field">
+<div class="label">
+Shift
+</div>
+<div class="value">
+1
+</div>
+</div>
+<div class="field">
+<div class="label">
+Examination Center Address
+</div>
+<div class="value">
+GOVT INDUSTRIAL TRAINING INSTITUTE, BERHAMPUR, PO:- ENGINEERING SCHOOL BERHAMPUR
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="profile-row">
+<div class="kartik">
+<br />
+<div class="details">
+<div class="col">
+<div class="field">
+<div class="label">
+Roll No
+</div>
+<div class="value">
+00190821034775
+</div>
+</div>
+<div class="field">
+<div class="label">
+Name
+</div>
+<div class="value">
+RAKESH KUMAR BEHERA
+</div>
+</div>
+
+<div class="field">
+<div class="label">
+Father Name
+</div>
+<div class="value">
+BHAGABANA BEHERA
+</div>
+</div>
+<div class="field">
+<div class="label">
+Date of Birth
+</div>
+<div class="value">
+04-May-1999
+</div>
+</div>
+<div class="field">
+<div class="label">
+ITI Name
+</div>
+<div class="value">
+Govt Industrial Training Institute, Berhampur
+</div>
+</div>
+<div class="field">
+<div class="label">
+Unit
+</div>
+<div class="value">
+7
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="field">
+<div class="label">
+Trade Name
+</div>
+<div class="value">
+Electrical
+</div>
+</div>
+<div class="field">
+<div class="label">
+Trade Code
+</div>
+<div class="value">
+442
+</div>
+</div>
+<div class="field">
+<div class="label">
+Admission Year
+</div>
+<div class="value">
+2018
+</div>
+</div>
+<div class="field">
+<div class="label">
+ITI Code
+</div>
+<div class="value">
+GU21000525
+</div>
+</div>
+<div class="field">
+<div class="label">
+Shift
+</div>
+<div class="value">
+1
+</div>
+</div>
+<div class="field">
+<div class="label">
+Examination Center Address
+</div>
+<div class="value">
+GOVT INDUSTRIAL TRAINING INSTITUTE, BERHAMPUR, PO:- ENGINEERING SCHOOL BERHAMPUR
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Marks / table -->
+<div class="marks-card">
+<table>
+<thead
+<tr>
+<th></th>
+<th></th>
+<th colspan="2">Employability Skills</th>
+<th colspan="2">Trade Theory</th>
+<th colspan="2">Trade Practical</th>
+<th colspan="2">Formative Assessment</th>
+<th colspan="2">Total</th>
+</tr>
+</thead>
+<thead
+<tr>
+<th>S. No.</th>
+<th>Year</th>
+<th>Max Marks</th>
+<th>Marks Secured</th>
+<th>Max Marks</th>
+<th>Marks Secured</th>
+<th>Max Marks</th>
+<th>Marks Secured</th>
+<th>Max Marks</th>
+<th>Marks Secured</th>
+<th>Max Marks</th>
+<th>Marks Secured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Year-1**</td>
+<td>50</td>
+<td>32</td>
+<td>100</td>
+<td>82</td>
+<td>250</td>
+<td>249</td>
+<td>200</td>
+<td>197</td>
+<td>600</td>
+<td>560</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Year-2**</td>
+<td>50</td>
+<td>34</td>
+<td>100</td>
+<td>46</td>
+<td>250</td>
+<td>249</td>
+<td>200</td>
+<td>195</td>
+<td>600</td>
+<td>524</td>
+</tr>
+<tr class="total">
+<td colspan="2">Total</td>
+<td>100</td>
+<td>66</td>
+<td>200</td>
+<td>128</td>
+<td>500</td>
+<td>498</td>
+<td>400</td>
+<td>392</td>
+<td>1200</td>
+<td>1084</td>
+</tr>
+</tbody>
+</table>
+
+<div class="result">
+<div>
+Result Date: <span style="font-weight:800;margin-left:8px">27-Sep-2020</span>
+</div>
+<br />
+<div>
+RESULT : <span style="color:green;margin-left:8px">Pass</span>
+</div>
+<br /><br />
+</div>
+</div>
+
+<!-- footer small note -->
+</div>
+</div>
+
+</body>
+</html>
